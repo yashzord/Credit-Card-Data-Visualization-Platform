@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to CoreCard Visualization</title>
+    <style>
+      body {
+        margin: 0;
+        /* background-image: url("https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1778&q=80");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.8; */
+      }
+      canvas {
+        display: block;
+      }
+      .first-image {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 250px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/CoreCard_Corporation_logo.png?20221211043516" alt="c" class="first-image"/>
+    {% block javascripts %}
+    <script
+      type="module"
+      src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+    {% endblock %}
+  </body>
+</html>

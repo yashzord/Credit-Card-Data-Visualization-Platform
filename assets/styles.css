@@ -1,0 +1,110 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  /* grid-gap: 5px; */
+  background-image: url("https://plainbackground.com/plain1024/383c3d.png");
+  background-size: 100%;
+  background-position: center;
+  /* background-color: gray; */
+
+}
+
+.container > div {
+  /* border: 1px solid hsl(176, 87%, 7%, 0.6);
+  border-radius: 10px; */
+  /* box-shadow: rgba(128, 128, 128, 0.4) -5px 5px; */
+  background: hsl(0, 7%, 11%, 0.9);
+  position: relative;
+}
+
+.viewing-port {
+  grid-area: 1/1/4/3;
+  /* width: 400px;
+  height: 400px; */
+  overflow: hidden;
+}
+
+.viewing-port > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.viewing-port > div:first-child {
+  display: block; /* Show the first graph by default */
+}
+
+.threejs-plot-container {
+  grid-area: 1/3/2/5;
+  height: 400px; /* Set a fixed height for each container */
+  overflow: hidden;
+}
+
+.base-plot-container {
+  grid-area: 2/3/3/4;
+  height: 400px; /* Set a fixed height for each container */
+  overflow: hidden;
+
+}
+.funnel-container {
+  grid-area: 2/4/3/5;
+  height: 400px; /* Set a fixed height for each container */
+  overflow: hidden;
+}
+.us-map-container {
+  grid-area: 3/3/4/4;
+  height: 400px; /* Set a fixed height for each container */
+  overflow: hidden;
+}
+.pie-container {
+  grid-area: 3/4/4/5;
+  height: 400px; /* Set a fixed height for each container */
+  overflow: hidden;
+}
+
+/* for pos instance */
+
+.containernew {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 80px;
+  /* grid-gap: 5px; */
+  background-image: url("https://plainbackground.com/plain1024/383c3d.png");
+  background-size: 100%;
+  background-position: center;
+  background-color: black;
+}
+
+.containernew > div {
+  border: 1px solid hsl(176, 87%, 7%, 0.6);
+  border-radius: 10px;
+  /* box-shadow: rgba(128, 128, 128, 0.4) -5px 5px; */
+  background: hsl(0, 7%, 11%, 0.9);
+  position: relative;
+}
+
+.pie-chart-container {
+  grid-area: 1/1/2/2;
+}
+
+.bar-chart-container {
+  grid-area: 1/2/2/3;
+}
+
+.footer-container {
+  grid-area: 2/1/3/2; /* This spans both columns in the 80px row */
+}
+.footer-container2 {
+  grid-area: 2/2/3/3; /* This spans both columns in the 80px row */
+}
+
+.footer-image {
+  width: 100%; /* This ensures the image doesn't stretch wider than its container */
+  height: 70px;   /* This scales the height proportionally */
+  display: block; /* Optional, to remove any default margins or padding */
+  margin: 0 auto; /* Optional, to center the image if it's smaller than the container */
+}
